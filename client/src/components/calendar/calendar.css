@@ -1,0 +1,97 @@
+:root {
+  --color-white: #ffffff;
+  --color-light-gray: #d3d3d3;
+  --color-dark-gray: #333333;
+  --color-primary: #007bff; /* Change this to your primary color */
+  --color-secondary: #58a0de; /* Change this to your secondary color */
+  --color-background: #f8f9fa; /* Change this to your background color */
+}
+
+.calendar {
+  height: 100vh;
+  background-color: var(--color-background); /* Change the background color of the calendar */
+}
+
+.calendar__container {
+  height: calc(100vh - 50px - 1rem);
+  background-color: var(--color-white); /* Change the background color of the calendar container */
+}
+
+/* Modal */
+
+.modal {
+  background: var(--color-white);
+  border: 1px solid var(--color-light-gray);
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .25);
+  color: var(--color-dark-gray);
+  display: inline;
+  inset: 50% auto auto 50%;
+  margin-right: -50%;
+  max-height: 600px;
+  max-width: 400px;
+  outline: none;
+  overflow: auto;
+  padding: 20px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.modal__background {
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+}
+
+.modal__title {
+  font-size: 2em;
+  margin-top: 0;
+  color: var(--color-primary); /* Change the color of the modal title */
+}
+
+/* React components */
+
+.ReactModalPortal>div {
+  opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: opacity .2s ease-in-out;
+  z-index: 999;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.react-datetime-picker__wrapper {
+  border: 0px !important;
+}
+
+.react-datetime-picker__inputGroup__input, .react-datetime-picker__button {
+  color: var(--color-dark-gray);
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.react-datetime-picker__button {
+  padding-left: .5rem !important;
+}
